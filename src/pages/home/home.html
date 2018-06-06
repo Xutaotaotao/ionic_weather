@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Taotao's weather</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <ion-grid *ngIf="weather">
+    <ion-row>
+      <ion-col>
+        <div class="location">{{weather.city}}</div>
+      </ion-col>
+      <ion-col>
+          <div class="icon">
+              <img src="{{weatherImg}}" alt="">
+            </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <h1 class="temp">{{weather.temp}}℃</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-100>
+        <ion-list>
+          <ion-item>
+            <strong>温度:</strong>{{weather.templow}}℃ -- {{weather.temphigh}}℃
+          </ion-item>
+          <ion-item>
+            <strong>风向:</strong>{{weather.winddirect}}
+          </ion-item>
+          <ion-item>
+            <strong>湿度:</strong>{{weather.humidity}}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
